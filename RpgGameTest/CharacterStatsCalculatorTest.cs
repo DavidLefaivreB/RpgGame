@@ -5,22 +5,32 @@ namespace RpgGameTest
 {
     public class CharacterStatsCalculatorTest
     {
-        private const int BaseDefense = 10;
+        Character character;
+        EquipmentManager equipmentManager;
+
+        [SetUp]
+        public void SetUp()
+        {
+            character = new Character();
+            equipmentManager = new EquipmentManager();
+        }
 
         [Test]
         public void IsWearingNoEquipment_HasBaseDefense()
         {
-            var totalDefense = CharacterStatsCalculator.CalculateDefense();
+            var totalDefense = CharacterStatsCalculator.CalculateDefense(character, equipmentManager);
 
-            Assert.AreEqual(BaseDefense, totalDefense);
+            Assert.That(totalDefense, Is.EqualTo(character.Defence));
         }
 
-        //[TestMethod]
+        [Test]
         public void IsWearingTop_HasTopAndBaseDefense()
         {
-            var totalDefense = CharacterStatsCalculator.CalculateDefense();
+            equipmentManager.Top = new TopEquipment(4);
 
-            Assert.AreEqual(BaseDefense, totalDefense);
+            var totalDefense = CharacterStatsCalculator.CalculateDefense(character, equipmentManager);
+
+            Assert.That(totalDefense, Is.EqualTo(character.Defence + equipmentManager.TotalDefence));
         }
     }
 }

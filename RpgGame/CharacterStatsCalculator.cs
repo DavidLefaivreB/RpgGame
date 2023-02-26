@@ -8,9 +8,9 @@ namespace RpgGame
 {
     public class CharacterStatsCalculator
     {
-        public static int CalculateDefense()
+        public static int CalculateDefense(Character character, EquipmentManager equipmentManager)
         {
-            return 10;
+            return character.Defence + equipmentManager.TotalDefence;
         }
     }
 }

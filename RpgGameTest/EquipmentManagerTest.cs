@@ -5,19 +5,28 @@ namespace RpgGameTest
 {
     public class EquipmentManagerTest
     {
-        private static readonly BottomEquipment PinkPanty = new BottomEquipment(3);
+        private static readonly BottomEquipment PinkPanty = new BottomEquipment(1);
+        private static readonly BottomEquipment DenimShort = new BottomEquipment(5);
         private static readonly TopEquipment WhiteTopTank = new TopEquipment(2);
+        private static readonly TopEquipment BlueBra = new TopEquipment(1);
+        private static readonly HeadEquipment BikerHelmet = new HeadEquipment(7);
 
-        private static readonly EquipmentManager equipment = new EquipmentManager();
+        private EquipmentManager equipment;
+
+        [SetUp]
+        public void SetupEquipmentManager()
+        {
+            equipment = new EquipmentManager();
+        }
 
         [Test]
-        public void EmptyEquipment_HasNoDefence()
+        public void PuttingNoEquipment_HasNoDefence()
         {
             Assert.That(equipment.TotalDefence, Is.EqualTo(0));
         }
 
         [Test]
-        public void BottomEquipment_DefenceIsEqualToBottomDefence()
+        public void PuttingBottomEquipment_DefenceIsEqualToBottomDefence()
         {
             equipment.Bottom = PinkPanty;
 
@@ -25,12 +34,22 @@ namespace RpgGameTest
         }
 
         [Test]
-        public void BottomAndTopEquipment_DefenceIsEqualToAllEquipmentDefence()
+        public void PuttingBottomAndTopEquipment_DefenceIsEqualToAllEquipmentDefence()
         {
             equipment.Bottom = PinkPanty;
             equipment.Top = WhiteTopTank;
 
             Assert.That(equipment.TotalDefence, Is.EqualTo(PinkPanty.Defence + WhiteTopTank.Defence));
+        }
+
+        [Test]
+        public void PuttinFullEquipment_DefenceIsEqualToAllEquipmentDefence()
+        {
+            equipment.Bottom = DenimShort;
+            equipment.Top = BlueBra;
+            equipment.Head = BikerHelmet;
+
+            Assert.That(equipment.TotalDefence, Is.EqualTo(DenimShort.Defence + BlueBra.Defence + BikerHelmet.Defence));
         }
     }
 }
