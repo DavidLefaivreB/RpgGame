@@ -1,3 +1,4 @@
+using Model.Equipment;
 using NUnit.Framework;
 using RpgGame;
 
@@ -26,7 +27,7 @@ namespace RpgGameTest
         [Test]
         public void IsWearingTop_HasTopAndBaseDefense()
         {
-            equipmentManager.Top = new TopEquipment(4);
+            equipmentManager.Top = new TopEquipment("Pirate Shirt", 4);
 
             var totalDefense = CharacterStatsCalculator.CalculateDefense(character, equipmentManager);
 

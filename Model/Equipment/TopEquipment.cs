@@ -4,15 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RpgGame
+namespace Model.Equipment
 {
     public class TopEquipment
     {
-        public TopEquipment(int defence)
+        public TopEquipment(String name, int defence)
         {
-            Defence =  defence;
+            Name = name;
+            Defence = defence;
         }
 
+        public string Name { get; }
         public int Defence { get; }
     }
 }

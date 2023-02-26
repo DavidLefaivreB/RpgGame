@@ -5,7 +5,11 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RpgGameTest", "RpgGameTest\RpgGameTest.csproj", "{CC3AE69D-B345-4A84-88A6-74A14F0E9335}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RpgGame", "RpgGame\RpgGame.csproj", "{5CAC0B9B-A437-4263-9CF8-4A7AEF07AB5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RpgGame", "RpgGame\RpgGame.csproj", "{5CAC0B9B-A437-4263-9CF8-4A7AEF07AB5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{D11B6B43-3CDD-49AB-980E-FFA6D26E6294}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{2B1282E9-BB5E-4575-B02D-A4277749B8BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{5CAC0B9B-A437-4263-9CF8-4A7AEF07AB5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CAC0B9B-A437-4263-9CF8-4A7AEF07AB5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CAC0B9B-A437-4263-9CF8-4A7AEF07AB5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D11B6B43-3CDD-49AB-980E-FFA6D26E6294}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D11B6B43-3CDD-49AB-980E-FFA6D26E6294}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D11B6B43-3CDD-49AB-980E-FFA6D26E6294}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D11B6B43-3CDD-49AB-980E-FFA6D26E6294}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B1282E9-BB5E-4575-B02D-A4277749B8BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B1282E9-BB5E-4575-B02D-A4277749B8BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B1282E9-BB5E-4575-B02D-A4277749B8BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B1282E9-BB5E-4575-B02D-A4277749B8BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
